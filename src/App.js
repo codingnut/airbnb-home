@@ -3,6 +3,8 @@ import Hero from "./components/Hero";
 import Card from "./components/Card";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import locationData from "./locationData";
+
 const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -21,15 +23,27 @@ const responsive = {
     }
 };
 function App() {
+
+  const locations = locationData.map((location, index) => {
+    return (<Card 
+      key={index}
+      classkey={index}
+      img={location.img} 
+      title={location.title} 
+      booked={location.booked} 
+      rating={location.rating} 
+      reviewCount={location.reviewCount} 
+      // or pass everything item = {location} or {...location}
+    />
+    )
+  }
+  )
   return (
     <div className="App">
       <Navbar />
       <Hero />
       <Carousel responsive={responsive}>
-        <Card img="/images/featured.png" title="Card one" />
-        <Card img="/images/featured.png" title="Card Two" />
-        <Card img="/images/featured.png" title="Card Three" />
-        <Card img="/images/featured.png" title="Card Four"/>
+        {locations}
       </ Carousel>
     </div>
   );
