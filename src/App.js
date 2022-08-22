@@ -33,6 +33,7 @@ function App() {
       booked={location.booked} 
       rating={location.rating} 
       reviewCount={location.reviewCount} 
+      price={location.price} 
       // or pass everything item = {location} or {...location}
     />
     )
@@ -40,7 +41,7 @@ function App() {
   )
   return (
     <div className="App">
-      <Navbar />
+      <Navbar items='1'/>
       <Hero />
       <Carousel responsive={responsive}>
         {locations}

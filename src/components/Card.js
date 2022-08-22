@@ -12,7 +12,9 @@ export default function Card(cardprops) {
         <span className='grey'>USA</span>
       </div>
       <p> {cardprops.title} </p>
-      <p><span className='bold'>From $120</span> / Person</p>
+      <div className='card-price'>
+        <span className='bold'>From ${cardprops.price}</span> 
+      </div>
     </div>
   );
 }

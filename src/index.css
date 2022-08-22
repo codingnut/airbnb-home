@@ -27,6 +27,9 @@ nav {
   padding: 10px 20px;
   box-shadow:0 0 8px 7px #efefef;
 }
+.saveditems {
+  margin-left: auto;
+}
 .logo {
   max-width: 120px;
 }
@@ -74,4 +77,11 @@ nav {
   left: 10px;
   background: #ffffff;
   padding: 2px 15px;
+}
+.card-price {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card-price a{
+  margin-left: auto;
 }
